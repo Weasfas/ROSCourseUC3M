@@ -1,0 +1,15 @@
+<launch>    
+	
+    <!-- Lanzar servidor -->
+    <node name="matematico_nodo" pkg="interaccion" type="matematico_nodo"/>
+
+    <!-- Lanzar empaquetador -->
+    <node name="empaquetador_nodo" pkg="interaccion" type="empaquetador_nodo"/>
+
+    <!-- Lanzar dialog: No se vera en consola! -->
+    <node name="dialogo_nodo" pkg="interaccion" type="dialogo_nodo"/>
+
+    <!-- Lanzar reloj y temporizador -->
+    <node name="reloj_nodo" pkg="interaccion" type="reloj_nodo"/>
+
+</launch>
