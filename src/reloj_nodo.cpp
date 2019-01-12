@@ -26,7 +26,7 @@ class ClockTimer
 		ros::NodeHandle nh;
 
 		myPub = nh.advertise<std_msgs::Bool>("interaccion/still_alive", 1000);
-		myTimer = nh.createTimer(ros::Duration(10), &ClockTimer::timer_callback, this);
+		myTimer = nh.createTimer(ros::Duration(60), &ClockTimer::timer_callback, this);
 	}
 
 	void timer_callback(const ros::TimerEvent& event)

@@ -58,7 +58,7 @@ int main(int argc, char **argv)
 	timeClock = nh.subscribe("interaccion/still_alive", 1000, &clock_callback); // Mensaje del temporizador
   interaccion::multiplicador srv; // Servidor
 	
-	ros::Rate loop_rate(60);
+	ros::Rate loop_rate(10);
 
 	// Texto del comando para espeak
 	string text = "default";
