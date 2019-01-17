@@ -1,15 +1,24 @@
-<launch>    
-	
+<launch>   
+
+    <!-- Lanzar informacion de usuario -->
+    <node name="inf_personal_usuario" pkg="interaccion" type="inf_personal_usuario" output="screen" launch-prefix="xterm -e"/>
+    
+    <!-- Lanzar posicion usuario -->
+    <node name="posicion_usuario_nodo" pkg="interaccion" type="posicion_usuario_nodo" output="screen" launch-prefix="xterm -e"/>
+    
+    <!-- Lanzar emocion usuario -->
+    <node name="emocion_usuario_nodo" pkg="interaccion" type="emocion_usuario_nodo" output="screen" launch-prefix="xterm -e"/>
+
     <!-- Lanzar servidor -->
     <node name="matematico_nodo" pkg="interaccion" type="matematico_nodo"/>
 
     <!-- Lanzar empaquetador -->
     <node name="empaquetador_nodo" pkg="interaccion" type="empaquetador_nodo"/>
 
-    <!-- Lanzar dialog: No se vera en consola! -->
-    <node name="dialogo_nodo" pkg="interaccion" type="dialogo_nodo"/>
+    <!-- Lanzar dialog -->
+    <node name="dialogo_nodo" pkg="interaccion" type="dialogo_nodo" output="screen" launch-prefix="xterm -e"/>
 
     <!-- Lanzar reloj y temporizador -->
-    <node name="reloj_nodo" pkg="interaccion" type="reloj_nodo"/>
+    <node name="reloj_nodo" pkg="interaccion" type="reloj_nodo" output="screen" launch-prefix="xterm -e"/>
 
 </launch>
